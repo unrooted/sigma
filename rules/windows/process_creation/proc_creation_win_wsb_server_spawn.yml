@@ -10,7 +10,7 @@ author: Konrad 'unrooted' Klawikowski
 date: 2026-05-30
 tags:
     - attack.execution
-    - attack.defense-evasion
+    - attack.stealth
     - attack.t1564.006
 logsource:
     category: process_creation
@@ -19,12 +19,6 @@ detection:
     selection:
         Image|endswith: '\WindowsSandboxServer.exe'
     condition: selection
-fields:
-    - User
-    - ProcessId
-    - Image
-    - ParentImage
-    - ParentCommandLine
 falsepositives:
     - Every legitimate Sandbox launch (this rule is a low-precision enrichment trigger)
 level: low

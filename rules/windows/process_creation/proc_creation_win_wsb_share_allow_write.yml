@@ -11,6 +11,7 @@ date: 2026-07-22
 tags:
     - attack.lateral-movement
     - attack.exfiltration
+    - attack.command-and-control
     - attack.t1105
 logsource:
     category: process_creation
@@ -24,11 +25,6 @@ detection:
             - ' share '
             - '--allow-write'
     condition: all of selection_*
-fields:
-    - CommandLine
-    - ParentImage
-    - ParentCommandLine
-    - User
 falsepositives:
     - Interactive Sandbox users adding folders to a running sandbox via the wsb.exe CLI as documented Microsoft workflow
     - Automation that intentionally grants write-back access to a sandbox for output collection

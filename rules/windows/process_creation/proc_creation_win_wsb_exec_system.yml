@@ -10,7 +10,7 @@ author: Konrad 'unrooted' Klawikowski
 date: 2026-07-22
 tags:
     - attack.execution
-    - attack.defense-evasion
+    - attack.stealth
     - attack.privilege-escalation
     - attack.t1218
     - attack.t1564.006
@@ -28,11 +28,6 @@ detection:
             - ' -r System'
             - ' --run-as System'
     condition: all of selection_*
-fields:
-    - CommandLine
-    - ParentImage
-    - ParentCommandLine
-    - User
 falsepositives:
     - Internal IT or development automation that scripts SYSTEM-context tasks inside sandboxes for testing
     - Sandbox-based CI runners that need elevated execution

@@ -19,10 +19,11 @@ author: Konrad 'unrooted' Klawikowski
 date: 2026-07-22
 tags:
     - attack.execution
-    - attack.defense-evasion
+    - attack.stealth
     - attack.privilege-escalation
     - attack.lateral-movement
     - attack.exfiltration
+    - attack.command-and-control
     - attack.t1218
     - attack.t1564.006
     - attack.t1105
